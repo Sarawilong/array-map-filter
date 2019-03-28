@@ -25,6 +25,9 @@ Sortie attendue:
 */
 
 function getCampusesTeachingReact(campuses) {
+  
+  let filtre1 = campuses.filter(toto => toto.includes('JS/React'))
+  return filtre1.map(tata => tata.name)
 }
 
 module.exports = getCampusesTeachingReact;

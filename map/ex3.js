@@ -60,6 +60,16 @@ En sortie:
  */
 
 function getMoviesFreshness(movies) {
+  return movies.map (toto => {
+    if (toto.rating<60){
+      toto.label = 'rotten';
+    } else if (toto.rating>=60 && toto.rating<=75) {
+      toto.label = 'fresh';
+    } else {
+      toto.label = 'certified fresh';
+    }
+    return toto;
+  })
 }
 
 
